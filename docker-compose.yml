@@ -8,7 +8,7 @@ services:
       #- ./nginx.conf:/etc/nginx/nginx.conf
       - ./nginxlog:/var/log/nginx
     ports:
-      - "80:80"
+      - "8888:80"
     
   php_local:
     build:
@@ -16,5 +16,5 @@ services:
     container_name: php_local
     #volumes:
     #  - ./index.php:/var/www/index.php
-    #ports:
-    #  - 80:80
+    ports:
+      - 80:80
