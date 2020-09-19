@@ -1,5 +1,5 @@
 FROM php:7.4-cli
 WORKDIR /var/www/
 COPY . .
-RUN php -S localhost:80 index.php
+RUN php -S php_local:80 index.php
 CMD [ "php", "./index.php" ]
