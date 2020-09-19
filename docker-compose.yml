@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.3"
 services:
   nginx_pub:
     image: nginx:latest
@@ -12,8 +12,7 @@ services:
       - php_local
     
   php_local:
-    build: 
-      dockerfile: dockerfile
+    build: dockerfile
     container_name: php_local
     volumes:
       - ./index.php:/var/www/index.php
