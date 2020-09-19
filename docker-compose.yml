@@ -3,9 +3,9 @@ services:
   nginx_pub:
     image: nginx:latest
     container_name: nginx_public
-     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx.access.log:/var/log/nginx/access.log
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx.access.log:/var/log/nginx/access.log
     ports:
       - 8888:80
     links:
