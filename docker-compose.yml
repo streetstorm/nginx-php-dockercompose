@@ -9,6 +9,8 @@ services:
       - ./nginxlog:/var/log/nginx
     ports:
       - "8888:80"
+    links:
+      - php_local
     
   php_local:
     build:
