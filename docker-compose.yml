@@ -15,5 +15,3 @@ services:
     build:
       context: ./php-cli
     container_name: php
-    ports:
-      - "80:80"

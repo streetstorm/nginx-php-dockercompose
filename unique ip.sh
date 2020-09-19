@@ -1,0 +1,1 @@
+less ./nginxlog/access.log | cut -d' ' -f1 | sort | uniq > unuque_ip.txt
