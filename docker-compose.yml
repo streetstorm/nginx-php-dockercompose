@@ -1,9 +1,9 @@
 version: "3.3"
 services:
-  nginx_pub:
+  nginx:
     build:
       context: ./nginx
-    container_name: nginx_public
+    container_name: nginx
     volumes:
       #- ./nginx.conf:/etc/nginx/nginx.conf
       - ./nginxlog:/var/log/nginx
@@ -12,11 +12,11 @@ services:
     links:
       - php_local
     
-  php_local:
+  php:
     build:
       context: ./php-cli
-    container_name: php_local
+    container_name: php
     #volumes:
     #  - ./index.php:/var/www/index.php
     ports:
-      - 80:80
+      - "80:80"
