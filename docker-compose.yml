@@ -10,7 +10,7 @@ services:
     ports:
       - "8888:80"
     links:
-      - php_local
+      - php
     
   php:
     build:
